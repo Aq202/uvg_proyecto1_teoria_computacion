@@ -5,7 +5,8 @@ def state_lock(current_state, transitions):
     lock = [current_state]
     for state in lock:
         for newState in [st for (key, value) in transitions.items() if key[0] == state and key[1] == 'ε' for st in value]:
-            lock.append(newState)
+            if newState not in lock:
+                lock.append(newState)
     return set(lock)
 
 def subsets(afn):
