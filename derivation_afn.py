@@ -1,6 +1,7 @@
 import time
 
 def is_accepted(afn, input_string):
+        print('\nComprobando cadena en AFN')
         start = time.time()
         def epsilon_closure(states):
             ec = set(states)

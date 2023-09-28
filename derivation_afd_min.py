@@ -8,6 +8,7 @@ def transition_afd_min(AFD_MIN, q, a):
       return transition[2]
 
 def derivation_afd_min(AFD_MIN, w):
+  print('\nComprobando cadena en AFD minimal')
   start = time.time()
   #print(AFD_MIN['INITIAL_STATE'])
   current_state = AFD_MIN['INITIAL_STATE']
