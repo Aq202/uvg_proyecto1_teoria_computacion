@@ -53,7 +53,7 @@ if __name__ == "__main__":
         '''
         generate_txt('AFD_MIN.txt', result_afd_min)
 
-        generate_graph_neo4j(AFD_MIN)
+        #generate_graph_neo4j(AFD_MIN)
 
         finish = False
         while not finish:
