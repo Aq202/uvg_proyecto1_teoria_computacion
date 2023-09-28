@@ -1,4 +1,7 @@
+import time
+
 def is_accepted(afn, input_string):
+        start = time.time()
         def epsilon_closure(states):
             ec = set(states)
             stack = list(states)
@@ -23,6 +26,6 @@ def is_accepted(afn, input_string):
             current_states = epsilon_closure(next_states)
 
         if any(state == afn.final_state for state in current_states):
-          print(f'La cadena {input_string} sí es aceptada por el AFN')
+          print(f'La cadena {input_string} sí es aceptada por el AFN. Tiempo transcurrido {time.time() - start} s.')
         else:
-          print(f'La cadena {input_string} no es aceptada por el AFN')
+           raise ValueError(f'La cadena {input_string} no es aceptada por el AFN. Tiempo transcurrido {time.time() - start} s.')
