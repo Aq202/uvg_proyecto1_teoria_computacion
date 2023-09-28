@@ -2,6 +2,7 @@ def transition_afd(afd, q, a):
   transitions = afd['TRANSITIONS']
   for transition in transitions:
     if q == transition[0] and a == transition[1]:
+      print(transition)
       return transition[2]
   raise ValueError("La cadena no es aceptada por el AFD.")
 

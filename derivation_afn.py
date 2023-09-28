@@ -14,10 +14,12 @@ def is_accepted(afn, input_string):
         current_states = epsilon_closure({afn.initial_state})
 
         for symbol in input_string:
+            print(f'Estados actuales: {current_states}')
             next_states = set()
             for state in current_states:
                 if (state, symbol) in afn.transitions:
                     next_states.update(afn.transitions[(state, symbol)])
+                    print(f'{(state, symbol)}: {afn.transitions[(state, symbol)]}')
             current_states = epsilon_closure(next_states)
 
         if any(state == afn.final_state for state in current_states):
