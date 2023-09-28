@@ -64,7 +64,7 @@ if __name__ == "__main__":
                   continue
             elif r == 'y':
                 try:
-                    word = input("Ingresar cadena de prueba: ")
+                    word = input("Ingresar cadena de prueba: ").replace("ε","")
                     #verificar afn
                     is_accepted(afn, word)
                     derivation_afd(AFD, word)
